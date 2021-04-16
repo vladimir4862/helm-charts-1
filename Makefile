@@ -10,6 +10,7 @@ lint:
 
 # Package chart into zip file
 package:
+	helm dependency update charts/victoria-metrics-k8s-stack
 	helm package charts/* -d packages
 
 # Create index file (use only for initial setup)
